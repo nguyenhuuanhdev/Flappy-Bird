@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="FlappyBird.css" />
+</head>
+
+<body>
+    <div class="game-container">
+        <!-- Background elements -->
+        <div class="clouds">
+            <div class="cloud cloud1"></div>
+            <div class="cloud cloud2"></div>
+        </div>
+
+        <!-- Game canvas -->
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+
+        <!-- HUD -->
+        <div class="hud">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="best-score">Best: <span id="bestScore">0</span></div>
+        </div>
+
+        <!-- Start screen -->
+        <div class="start-screen" id="startScreen">
+            <h1> FLAPPY BIRD 🐦</h1>
+            <p>Nhấn SPACE hoặc click để bay!<br>Tránh các ống nước xanh!</p>
+            <button class="start-btn" onclick="startGame()">BẮT ĐẦU CHƠI</button>
+        </div>
+
+        <!-- Game over screen -->
+        <div class="game-over" id="gameOver">
+            <h2>🎮 GAME OVER 🎮</h2>
+            <p>Điểm số: <span id="finalScore">0</span></p>
+            <p>Điểm cao nhất: <span id="finalBestScore">0</span></p>
+            <!-- <button class="restart-btn" onclick="restartGame()">CHƠI LẠI</button> -->
+            <button class="restart-btn" onclick="resetToStart()"
+                style="margin-left: 10px; background: linear-gradient(45deg, #ff6b6b, #ee5a24);">RESET</button>
+        </div>
+
+        <!-- Instructions -->
+        <!-- <div class="instructions">
+            <div>🎯 SPACE / CLICK - Bay lên</div>
+            <div>🏆 Tránh ống nước để ghi điểm!</div>
+        </div> -->
+    </div>
+
+    <script src="FlappyBird.js"></script>
+</body>
+
+</html>
